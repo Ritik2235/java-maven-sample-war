@@ -1,7 +1,7 @@
 <form action="action_page.php">
   <div class="container">
     <h1>Welcome !! RITIK DevOps Student Registration  form!</h1>
-     <h2>Hey this is the project third in Docker thnx!</h2>
+     <h2>Hey this is the project of 25th july   in Docker concept thnx!</h2>
 
     <p>Please fill in this form for registration !!!!!</p>
     <hr>
