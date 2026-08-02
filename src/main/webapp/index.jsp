@@ -1,7 +1,7 @@
 <form action="action_page.php">
   <div class="container">
     <h1>Welcome !! RITIK DevOps Student Registration  form!</h1>
-     <h2>Hey this is the project of 25th july   in Docker concept thnx!</h2>
+     <h2>Hey this is the projct fifth fully CI/CD Deployment on K8s!</h2>
 
     <p>Please fill in this form for registration !!!!!</p>
     <hr>
@@ -11,14 +11,14 @@
   <input type="text" placeholder="Enter Name" name="name" id="Name" required>
 
      <label for="Name"><b>Email</b></label>
-    <input type="text" placeholder=Enter Name" name="email" id="Name" required>
+    <input type="text" placeholder=Enter Name" name="name" id="Name" required>
 
    <label for="Name "><b>Brother</b></label>
     <input type="text" placeholder=Enter Name" name="Brother" id="Name" required>
 
 
     <label for="email"><b>Email</b></label>
-    <input type="text" placeholder="Enter Email" name="email" id="email" required>
+    <input type="text" placeholder="Enter Email" name="enter" id="enter" required>
 
     <label for="psw"><b>Password</b></label>
     <input type="password" placeholder="Enter Password" name="psw" id="psw" required>
