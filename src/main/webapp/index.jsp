@@ -1,7 +1,7 @@
 <form action="action_page.php">
   <div class="container">
     <h1>Welcome !! RITIK DevOps Student Registration  form!</h1>
-     <h2>Hey this is the projct fifth fully CI/CD Deployment on K8s!</h2>
+     <h2>!! Hey This is a complete CI-CD DevOps Pipeline Proeject By Ritik KK !!  THANK ('_')</h2>
 
     <p>Please fill in this form for registration !!!!!</p>
     <hr>
