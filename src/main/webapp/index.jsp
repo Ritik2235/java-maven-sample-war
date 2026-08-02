@@ -15,7 +15,7 @@
   <input type="text" placeholder="Enter Name" name="name" id="Name" required>
 
 
-<label for="Name"><b>Wifen</b></label>
+<label for="Name"><b>Wife</b></label>
   <input type="text" placeholder="Enter Name" name="name" id="Name" required>
 
 
