@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: registerapp
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: registerapp
+  template:
+    metadata:
+      labels:
+        app: registerapp
+    spec:
+      containers:
+      - name: registerapp
+        image: ritikkashyap/regapp:latest
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 8080
