@@ -1,0 +1,17 @@
+---
+- name: Build and push RegisterApp Docker image
+  hosts: ansible
+
+  tasks:
+    - name: Build Docker image
+      ansible.builtin.command:
+        cmd: docker build -t regapp:latest .
+        chdir: /opt/docker
+
+    - name: Tag image for Docker Hub
+      ansible.builtin.command:
+        cmd: docker tag regapp:latest ritikkashyap/regapp:latest
+
+    - name: Push Docker image to Docker Hub
+      ansible.builtin.command:
+        cmd: docker push ritikkashyap/regapp:latest

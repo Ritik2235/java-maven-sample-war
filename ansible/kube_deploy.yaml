@@ -1,0 +1,48 @@
+---
+- name: Deploy application to Kubernetes
+  hosts: kubernetes
+  remote_user: root
+
+  tasks:
+    - name: Apply Kubernetes deployment
+      ansible.builtin.command:
+        cmd: kubectl apply -f /root/deployment.yaml
+
+    - name: Apply Kubernetes LoadBalancer service
+      ansible.builtin.command:
+        cmd: kubectl apply -f /root/loadbalancer.yaml
+
+    - name: Update Docker image in deployment
+      ansible.builtin.command:
+        cmd: kubectl set image deployment/registerapp registerapp=ritikkashyap/regapp:latest
+
+    - name: Restart deployment pods
+      ansible.builtin.command:
+        cmd: kubectl rollout restart deployment/registerapp
+
+    - name: Wait for rollout to complete
+      ansible.builtin.command:
+        cmd: kubectl rollout status deployment/registerapp --timeout=180s
+      register: rollout_output
+
+    - name: Show rollout status
+      ansible.builtin.debug:
+        var: rollout_output.stdout_lines
+
+    - name: Check running pods
+      ansible.builtin.command:
+        cmd: kubectl get pods -o wide
+      register: pod_output
+
+    - name: Show pods
+      ansible.builtin.debug:
+        var: pod_output.stdout_lines
+
+    - name: Check Kubernetes services
+      ansible.builtin.command:
+        cmd: kubectl get svc
+      register: service_output
+
+    - name: Show services
+      ansible.builtin.debug:
+        var: service_output.stdout_lines
