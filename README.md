@@ -1,6 +1,6 @@
 # Java Maven CI/CD Deployment on AWS
 
-## Project Overview
+## Project Overview/
 
 This project demonstrates an end-to-end DevOps workflow for building, containerizing, and deploying a Java Maven web application on AWS.
 
